@@ -4,7 +4,14 @@
 # or whitespace (' ').
 
 class EmailAddressParser
+  attr_accessor :email_addresses
+  
   def initialize(email_addresses)
     @email_addresses = email_addresses.split(Regexp.union(" ", ","))
   end
+  
+  def parse
+    @email_addresses
+  end
+  
 end
