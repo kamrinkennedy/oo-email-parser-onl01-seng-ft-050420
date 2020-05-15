@@ -7,7 +7,7 @@ class EmailAddressParser
   attr_accessor :email_addresses
   
   def initialize(email_addresses)
-    @email_addresses = email_addresses.split(Regexp.union(" ", ",")).reject(&:empty?)
+    @email_addresses = email_addresses.split(Regexp.union(" ", ",")).reject(&:empty?).uniq
   end
   
   def parse
