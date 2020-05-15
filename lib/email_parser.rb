@@ -3,3 +3,8 @@
 # unique email addresses. The delimiters to support are commas (',')
 # or whitespace (' ').
 
+class EmailAddressParser
+  def initialize(email_addresses)
+    @email_addresses = email_addresses.split(Regex.union(" ", ","))
+  end
+end
