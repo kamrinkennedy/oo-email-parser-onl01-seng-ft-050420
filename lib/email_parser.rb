@@ -5,6 +5,6 @@
 
 class EmailAddressParser
   def initialize(email_addresses)
-    @email_addresses = email_addresses.split(Regex.union(" ", ","))
+    @email_addresses = email_addresses.split(Regexp.union(" ", ","))
   end
 end
